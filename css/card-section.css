@@ -1,0 +1,207 @@
+.card-table{
+  position: relative;
+  top: -30px;
+  margin: auto;
+}
+
+.click-link{
+}
+
+.card > a:last-of-type{
+  position: relative;
+  top: -30px;
+}
+
+  .topic{
+    padding-top: 30px;
+    text-align: center;
+    color: rgb(63, 138, 217);
+  }
+
+.card a{
+  text-decoration: none;
+  color: #062330;
+}
+
+.card a:hover{
+  text-decoration: underline;
+  color: #f7b946;
+}
+/*cala sekcja ze wszystkimi kartami*/
+.card-section {
+  background-color: #f7f8f8;
+  height: 100%;
+  width: 100%;
+  padding: 5px 5px 110px 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-section a{
+	color:#062330;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.title{
+}
+
+/*cala karta*/
+.card {
+  height: 400px;
+  width: 300px;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 15px;
+  color: rgba(90, 92, 107, 0.85);
+  text-align: center;
+  font-size: 16px;
+}
+
+.card-info{
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card-info span img{
+  margin: 0 10px 0 20px;
+    position: relative;
+    top: 5px;
+}
+
+.card-info img:first-child{
+}
+
+
+/*karta ze zdjeciem*/
+.plate {
+  height: 200px;
+  width: 300px;
+  -webkit-transition: 0.5s; /* Safari */
+  transition: 0.5s;
+}
+
+.plate:hover{
+  transform: scale(1.2);
+}
+
+.overflow {
+  height: 50%;
+  width: 100%;
+  overflow:hidden;
+}
+
+.pic-price{
+  width: 70%;
+  height: auto;
+  background-color: rgba(6, 35, 48, 0.8);
+  font-size: 25px;
+  padding: 5px 0;
+  color: #fff;
+  z-index: 1;
+  position: relative;
+  bottom: 23%;
+}
+
+/*konkretne karty ze zdjeciem*/
+.card-1 .plate {
+  background-image: url(../img/houses/4avondale/4Avondale_print.jpg);
+  background-size: cover;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.card-2 .plate {
+  background-image: url(../img/houses/7sidmouth/sidmouth_road_prin.jpg);
+  background-size: cover;
+}
+
+.card-3 .plate {
+  background-image: url(../img/houses/12TravistockRoad/12Tavistock_print.jpg);
+  background-size: cover;
+}
+
+.card-4 .plate {
+  background-image: url(../img/houses/21Colvilleg/21_colville_ground_prin.jpg);
+  background-size: cover;
+}
+
+.card-5 .plate {
+  background-image: url(../img/houses/22poppleton/poppleton_road_prin.jpg);
+  background-size: cover;
+}
+
+.card-6 .plate {
+  background-image: url(../img/houses/33farmilo/farmilo_road_prin.jpg);
+  background-size: cover;
+}
+.card-7 .plate {
+  background-image: url(../img/houses/40Richmond/richmond_road_prin.jpg);
+  background-size: cover;
+}
+
+.card-8 .plate {
+  background-image: url(../img/houses/45Colville/45colville_road_prin.jpg);
+  background-size: cover;
+}
+
+.card-9 .plate {
+  background-image: url(../img/houses/55lascotts/lascotts_road_prin.jpg);
+  background-size: cover;
+}
+
+.card-10 .plate {
+  background-image: url(../img/houses/55morley/morley_road_prin.jpg);
+  background-size: cover;
+}
+
+.card-11 .plate {
+  background-image: url(../img/houses/57vanisttart/57Vanisttart_print.jpg);
+  background-size: cover;
+}
+
+.card-12 .plate {
+  background-image: url(../img/houses/58belgrave/58Belgrave_print.jpg);
+  background-size: cover;
+}
+.card-13 .plate {
+  background-image: url(../img/houses/66Huxley/huxley_road_prin.jpg);
+  background-size: cover;
+}
+
+.card-14 .plate {
+  background-image: url(../img/houses/107Calderon/107Calderon_print.jpg);
+  background-size: cover;
+}
+
+.card-15 .plate {
+  background-image: url(../img/houses/110NapierRoad/napier_road_prin.jpg);
+  background-size: cover;
+}
+
+.card-16 .plate {
+  background-image: url(../img/houses/116MurchinsonRoad/murchison_road_prin.jpg);
+  background-size: cover;
+}
+
+.card-17 .plate {
+  background-image: url(../img/houses/227Ramsay/ramsay_road_prin.jpg);
+  background-size: cover;
+}
+
+.card-18 .plate {
+  background-image: url(../img/houses/576high/high_road_prin.jpg);
+  background-size: cover;
+}
+
+.card-19 .plate {
+  background-image: url(../img/houses/21Colvillef/21_colville_first_prin.jpg);
+  background-size: cover;
+}
