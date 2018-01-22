@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/current-house.css" />
+    <link rel="stylesheet" type="text/css" href="css/contact-form.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>4 Avondale Road</title>
+
+
+<script>
+function initMap() {
+  var uluru = {lat: 51.571, lng: -0.022};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 11,
+    center: uluru
+  });
+  var imgIcon = './img/orange-icon.png';
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+    icon: imgIcon
+  });
+}
+
+
+$(document).ready(function () {
+$('.miniatures img').on({
+  click: function(){
+
+    var imageUrl = $(this).attr('src');
+    $('#mainImage').attr('src', imageUrl);
+  }
+});
+});
+
+
+    $(document).ready(function(){
+      $('.burger-holder').on('click', function(){
+        $('.navbar-list').toggleClass('open', "easeInSine");
+
+      });
+    });
+
+          function toggleNavPanel(x){
+        var panel = document.getElementById(x),
+            navarrow = document.getElementById("navarrow"), maxH="40px";
+        if(panel.style.height == maxH){
+            panel.style.height = "0px";
+            navarrow.innerHTML = "&#9662;";
+        } else {
+            panel.style.height = maxH;
+            navarrow.innerHTML = "&#9652;";
+        }
+    }
+
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+
+
+</script>
+  </head>
+  <body>
+    <div class="top-menu">
+      <ul class="top-list">
+    <img class="pict" src="img/phone-receiver.png">
+        <li class="number"> +44(0)2079989386</li>
+        <li><a href="abaut.html">About Us</a></li>
+        <li>
+          <a onclick="toggleNavPanel('sections_panel')" href="#">Select Language <span id="navarrow">&#9662;</span></a>
+          <div id="sections_panel">
+            <ul class="lng">
+              <li><a href="esp.html">Español</a></li>
+              <li><a href="eng.html">English</a></li>
+              <li><a href="fr.html">Français</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+    <nav class="navbar">
+
+    <div class="navbar-branding">
+      <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+    </div>
+
+    <a class="burger-nav">
+      <div class="burger-holder" onclick="myFunction(this)">
+        <div class="burger bar1"></div>
+        <div class="burger bar2"></div>
+        <div class="burger bar3"></div>
+      </div>
+    </a>
+
+    <ul class="navbar-list">
+      <li><a href="index.html">home</a></li>
+      <li><a href="accommodations.html">our houses</a></li>
+      <li><a href="viewing.html">Book a Viewing</a></li>
+      <li><a href="book-a-room.html">Book a Room</a></li>
+      <li><a href="quote.html">Get a Quote</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    </nav>
+
+<!--midle section==============================-->
+
+
+    <div class="add_wrapper">
+
+      <div class="add_header">
+
+        <div class="add_address">
+          <h3><a href="4avondale.html">4 Avondale Road</a></h3>
+        </div>
+
+        <ul class="add_nav_small">
+          <li><a id="map_link" class="link" href="#map"><img class="map-icon" src="img/orange-icon.png" />View on a map</a></li>
+          <li><a id="viewing_link" class="link" href="viewing.html">Book a Viewing</a></li>
+          <li><a href="get-a-quote.html">Get a Quote</a></li>
+        </ul>
+
+
+
+      </div><!--add_header-->
+
+      <div class="add_gallery">
+
+        <div class="galery">
+          <div class="next">&rang;</div>
+          <div class="prev">&lang;</div>
+          <img id="mainImage" src="img/houses/4avondale/4Avondale_LivingCA.JPG" />
+          <br />
+        </div>
+
+          <div class="miniatures">
+            <img class="imgStyle" src="img/houses/4avondale/4Avondale_LivingCA.JPG">
+            <img class="imgStyle" src="img/houses/4avondale/4Avondale_Room02aB.JPG">
+            <img class="imgStyle" src="img/houses/4avondale/4Avondale_Room04aA.JPG">
+            <img class="imgStyle" src="img/houses/4avondale/4Avondale_Room05bB.JPG">
+            <img class="imgStyle" src="img/houses/4avondale/4Avondale_Room06aB.JPG">
+            <img class="imgStyle" src="img/houses/4avondale/4Avondale_Toilet01B.JPG">
+            <img class="imgStyle" src="img/houses/4avondale/4Avondale_Toilet02aB.JPG">
+            <img class="imgStyle" src="img/houses/4avondale/4Avondale_GardenA.JPG">
+          </div>
+            <ul class="add_icons">
+              <li><div class="tooltip"><img src="img/houses/ico-bed.png" /><span class="tooltiptext">6 Bedrooms</span></div></li>
+              <li><div class="tooltip"><img src="img/houses/ico-shower.png" /><span class="tooltiptext">3 Bathrooms</span></div></li>
+              <li><div class="tooltip"><img src="img/houses/ico-kitchen.png" /><span class="tooltiptext">Kitchen</span></div></li>
+              <li><div class="tooltip"><img src="img/houses/ico-living.png" /><span class="tooltiptext">Livingroom</span></div></li>
+              <li><div class="tooltip"><img src="img/houses/ico-bill.png" /><span class="tooltiptext">Bills Included</span></div></li>
+              <li><div class="tooltip"><img src="img/houses/ico-internet.png" /><span class="tooltiptext">Free Wi-Fi</span></div></li>
+            </ul>
+
+      </div><!--add_gallery-->
+
+      <div class="add_rooms_table">
+
+        <table class="table-fill only">
+<thead>
+<tr>
+<th></th>
+<th class="text-left">Bed/People</th>
+<th class="text-left">&pound;/Week</th>
+</tr>
+</thead>
+<tbody class="table-hover">
+<tr>
+<td>Room 1</td>
+<td class="text-left">Bed 1A/Twin</td>
+<td class="text-left">&pound; 125.00</td>
+</tr>
+<tr>
+<td>Room 1</td>
+<td class="text-left">Bed 1B/Twin</td>
+<td class="text-left">&pound; 125.00</td>
+</tr>
+<tr>
+<td>Room 2</td>
+<td class="text-left">Bed 2A/Twin</td>
+<td class="text-left">&pound; 125.00</td>
+</tr>
+<tr>
+<td>Room 2</td>
+<td class="text-left">Bed 2B/Twin</td>
+<td class="text-left">&pound; 125.00</td>
+</tr>
+<tr>
+<td>Room 3</td>
+<td class="text-left">Bed 3A/Twin</td>
+<td class="text-left">&pound; 125.00</td>
+</tr>
+<tr>
+<td>Room 3</td>
+<td class="text-left">Bed 3B/Twin</td>
+<td class="text-left">&pound; 125.00</td>
+</tr>
+<tr>
+<td>Room 4</td>
+<td class="text-left">Single/Single</td>
+<td class="text-left">&pound; 140.00</td>
+</tr>
+<tr>
+<td>Room 5</td>
+<td class="text-left">Bed 5A/Twin</td>
+<td class="text-left">&pound; 125.00</td>
+</tr>
+<tr>
+<td>Room 5</td>
+<td class="text-left">Bed 5B/Twin</td>
+<td class="text-left">&pound; 125.00</td>
+</tr>
+<tr>
+<td>Room 6</td>
+<td class="text-left">Single/Single<l</td>
+<td class="text-left">&pound; 145.00</td>
+</tr>
+</tbody>
+</table>
+
+      </div><!--add_rooms_table-->
+
+      <div class="add_description">
+<h3>House Descreption:</h3>
+        <p>
+          A very large modernised Victorian house with two bathrooms, three toilets, a lovely kitchen and a huge dining/ living room.
+        </p>
+
+        <p>
+          The house is a 18 min bus ride from Walthamstow Central tube station, 15 min Bus ride from Leyton Tube station and easily accessible by 24-hour buses. The nearest buses are 48, 55, 56, N38 and N55.
+        </p>
+
+        <p>
+          The area is very convenient, with many shops and a library nearby.
+        </p>
+
+        <p>
+          Bills included: council tax, electricity, gas, water, internet and cleaner for the common areas.
+        </p>
+
+      </div><!--add_description-->
+
+      <div class="add_contact">
+
+        <h3>Quick Contact</h3>
+
+        <form id="contact" method="post">
+        <fieldset>
+          <input name="user_name" placeholder="Enter First Name" type="text">
+        </fieldset>
+
+        <fieldset>
+          <input name="user_lastname" placeholder="Enter Last Name" type="text">
+        </fieldset>
+
+        <fieldset>
+          <input name="user_email_address" placeholder="Enter Email Address" type="text">
+        </fieldset>
+
+
+        <fieldset>
+          <select name="room" id="room">
+            <option value="">Select a Room</option>
+            <option value="anything">Anything Available</option>
+            <option value="single">Single</option>
+            <option value="twin">Double/Twin</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <textarea name="message" placeholder="Type your Message Here...."></textarea>
+        </fieldset>
+
+        <fieldset>
+          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+        </fieldset>
+      </form>
+
+      </div><!--add_contact-->
+
+            <div id="map"></div>
+    </div><!--add_wrapper-->
+
+
+
+
+  <!--========================================
+  footer-->
+
+
+
+
+    <footer class="pfooter">
+      <div  class="page-footer">
+        <section class="about-company">
+          <h3>
+            About
+          </h3>
+          <p>
+            LA4U has more than 10 years’ experience in the accommodation finding sector for students and young professionals.
+          </p>
+          <p>
+            LA4U provides a wide range of houses suited for different budgets in zones 2, 3 and 4 in London.
+          </p>
+        </section>
+
+        <nav class="footer-list">
+          <h3>
+            Menu:
+          </h3>
+          <ul class="footer-wrapper">
+            <li class="footer-item">
+              <a href="about.html">
+                About Us
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="accommodations.html">
+                Our Houses
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="viewing.html">
+                Book a Viewing
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="#book-a-room.html">
+                Book a Room
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="quote.html">
+                Get a Quote
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="map-lg.html">
+                View on Map
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="contact.html">
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <address class="footer-list">
+          <h3>
+            Address:
+          </h3>
+          <div class="footer-wrapper">
+            <span class="footer-item">
+              Legacy Business Centre
+            </span>
+            <span class="footer-item">
+              2A Ruckholt Rd, Leyton
+            </span>
+            <span class="footer-item">
+              London E10 5NP, UK
+            </span>
+  			<span class="footer-item">
+              Phone: +44(0)2079989386
+            </span>
+            <span class="footer-item">
+              E-mail: hello@londonaccommodation4u.com
+            </span>
+          </div>
+        </address>
+        <section class="footer-list">
+
+              <h3>
+            Media:
+          </h3>
+            <iframe class="facebook" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Flondonaccommodation4u&tabs=timeline&width=340&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </nav>
+          </div>
+        </section>
+      </div>
+      <div class="right">
+        <p>2018 &copy; Tomasz Frączek</p>
+      </div>
+    </footer>
+
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJyGbfNpO2_wMd-fEWwRJNiDjxR6HuKEo&callback=initMap"
+ type="text/javascript"></script>
+
+
+  </body>
+</html>

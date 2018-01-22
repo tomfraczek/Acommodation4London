@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/current-house.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/contact-form-lg.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <title>Book a Viewing - London Accommodation 4 U</title>
+
+
+<script>
+
+$(document).ready(function(){
+  $('.burger-holder').on('click', function(){
+    $('.navbar-list').toggleClass('open', "easeInSine");
+
+  });
+});
+
+      function toggleNavPanel(x){
+    var panel = document.getElementById(x),
+        navarrow = document.getElementById("navarrow"), maxH="40px";
+    if(panel.style.height == maxH){
+        panel.style.height = "0px";
+        navarrow.innerHTML = "&#9662;";
+    } else {
+        panel.style.height = maxH;
+        navarrow.innerHTML = "&#9652;";
+    }
+}
+
+function myFunction(x) {
+    x.classList.toggle("change");
+}
+
+    $( function() {
+    $( "#checkin" ).datepicker();
+    } );
+
+    $( function() {
+    $( "#checkout" ).datepicker();
+    } );
+
+
+      function initMap() {
+        var uluru = {lat: 51.557619, lng: -0.009061};
+        var newCenter = {lat: 51.631171, lng: -0.009794};
+        var map = new google.maps.Map(document.getElementById('map-s'), {
+          zoom: 10,
+          center: newCenter
+        });
+
+        var imgIcon = './img/orange-icon.png';
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+          icon: imgIcon
+        });
+
+        // Info window content
+    var infoWindowContent = '<div class="info_content">' +
+        '<h3>Contact Detals:</h3>' + '<img src="img/logo.png" class="mini-map-img">' +
+        '<p>Legacy Business Centre</p>' + '<p>2A Ruckholt Rd, Leyton</p>' + '<p>London E10 5NP, UK</p>' + '<p>+44(0)2079989386</p>' +  '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: infoWindowContent
+        });
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+        infowindow.open(map,marker);
+      }
+
+
+    </script>
+  </head>
+  <body>
+
+    <div class="top-menu">
+      <ul class="top-list">
+		<img class="pict" src="img/phone-receiver.png">
+        <li class="number"> +44(0)2079989386</li>
+        <li><a href="abaut.html">About Us</a></li>
+        <li>
+          <a onclick="toggleNavPanel('sections_panel')" href="#">Select Language <span id="navarrow">&#9662;</span></a>
+          <div id="sections_panel">
+            <ul class="lng">
+              <li><a href="esp.html">Español</a></li>
+              <li><a href="eng.html">English</a></li>
+              <li><a href="fr.html">Français</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+    <nav class="navbar">
+
+    <div class="navbar-branding">
+      <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+    </div>
+
+    <a class="burger-nav">
+      <div class="burger-holder" onclick="myFunction(this)">
+        <div class="burger bar1"></div>
+        <div class="burger bar2"></div>
+        <div class="burger bar3"></div>
+      </div>
+    </a>
+
+    <ul class="navbar-list">
+      <li><a href="index.html">home</a></li>
+      <li><a href="accommodations.html">our houses</a></li>
+      <li><a class="current" href="viewing.html">Book a Viewing</a></li>
+      <li><a href="book-a-room.html">Book a Room</a></li>
+      <li><a href="quote.html">Get a Quote</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+  </nav>
+
+<!--midle section==============================-->
+
+<div class="h1-header">
+    <h1>BOOK A VIEWING</h1>
+</div>
+<div class="add_wrapper">
+
+ <div class="add_header">
+
+   <div class="add_address">
+     <p>You can arrange a viewing with us filling up the form below. If so, we would need to book the viewing 24h before. <br />Our viewings are from Monday - Thursday 10:30 to 17:30 and Friday 10:30 to 15:00.<br /> More at <span class="orange"><a href="mailto:hello@londonaccommodation4u.com">hello@londonaccommodation4u.com</a></span> or visit us in the office.
+   </div>
+</div>
+
+<div class="middle">
+
+ <!--add_header-->
+
+ <form class="only" id="contact" method="post">
+ <fieldset class="fieldf">
+   <input name="user_name" placeholder="Enter First Name" type="text">
+ </fieldset>
+
+ <fieldset class="fieldf">
+   <input name="user_lastname" placeholder="Enter Last Name" type="text">
+ </fieldset>
+
+ <fieldset class="fieldf">
+   <input name="user_email_address" placeholder="Enter Email Address" type="text">
+ </fieldset>
+
+ <fieldset class="fieldf">
+   <input name="user_phone_number" placeholder="Enter Phone Number" type="tel">
+ </fieldset>
+
+ <fieldset class="fieldf">
+   <select name="house" id="house">
+     <option value="">Select a House</option>
+     <option value="107 Calderon Road" >107 Calderon Road</option>
+     <option value="110 Napier Road" >110 Napier Road</option>
+     <option value="116 Murchinson Road" >116 Murchinson Road</option>
+     <option value="12 Tavistock Road" >12 Tavistock Road</option>
+     <option value="21 Colville Road First Floor" >21 Colville Road First Floor</option>
+     <option value="21 Colville Road Ground Floor" >21 Colville Road Ground Floor</option>
+     <option value="22 Poppleton Road" >22 Poppleton Road</option>
+     <option value="227 Ramsay Road" >227 Ramsay Road</option>
+     <option value="33 Farmilo Road" >33 Farmilo Road</option>
+     <option value="4 Avondale Road" >4 Avondale Road</option>
+     <option value="40 Richmond Road" >40 Richmond Road</option>
+     <option value="45 Colville Road" >45 Colville Road</option>
+     <option value="55 Lascotts Road" >55 Lascotts Road</option>
+     <option value="55 Morley road" >55 Morley road</option>
+     <option value="57 Vansittart Road" >57 Vansittart Road</option>
+     <option value="576 High Road" >576 High Road</option>
+     <option value="58 Belgrave Road" >58 Belgrave Road</option>
+     <option value="66 Huxley Road" >66 Huxley Road</option>
+     <option value="7 Sidmouth Road" >7 Sidmouth Road</option>
+   </select>
+ </fieldset>
+
+ <fieldset class="fieldf">
+   <select name="room" id="room">
+     <option value="">Select a Room</option>
+     <option value="anything">Anything Available</option>
+     <option value="single">Single</option>
+     <option value="twin">Double/Twin</option>
+   </select>
+ </fieldset>
+
+ <fieldset class="fieldf">
+   <input type="text" id="checkin" name="checkin" placeholder="Select Check-In Date">
+ </fieldset>
+
+ <fieldset class="fieldf">
+   <input type="text" id="checkout" name="checkout" placeholder="Select Check-Out Date">
+ </fieldset>
+
+ <fieldset class="fieldr">
+   <textarea name="message" placeholder="Type your Message Here...."></textarea>
+ </fieldset>
+
+ <fieldset class="fieldr">
+   <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+ </fieldset>
+</form>
+
+<div id="map-s"></div>
+</div>
+</div>
+
+
+  <!--========================================
+  footer-->
+
+
+
+
+
+    <footer class="pfooter">
+      <div  class="page-footer">
+        <section class="about-company">
+          <h3>
+            About
+          </h3>
+          <p>
+            LA4U has more than 10 years’ experience in the accommodation finding sector for students and young professionals.
+          </p>
+          <p>
+            LA4U provides a wide range of houses suited for different budgets in zones 2, 3 and 4 in London.
+          </p>
+        </section>
+
+        <nav class="footer-list">
+          <h3>
+            Menu:
+          </h3>
+          <ul class="footer-wrapper">
+            <li class="footer-item">
+              <a href="about.html">
+                About Us
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="accommodations.html">
+                Our Houses
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="viewing.html">
+                Book a Viewing
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="#book-a-room.html">
+                Book a Room
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="quote.html">
+                Get a Quote
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="map-lg.html">
+                View on Map
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="contact.html">
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <address class="footer-list">
+          <h3>
+            Address:
+          </h3>
+          <div class="footer-wrapper">
+            <span class="footer-item">
+              Legacy Business Centre
+            </span>
+            <span class="footer-item">
+              2A Ruckholt Rd, Leyton
+            </span>
+            <span class="footer-item">
+              London E10 5NP, UK
+            </span>
+  			<span class="footer-item">
+              Phone: +44(0)2079989386
+            </span>
+            <span class="footer-item">
+              E-mail: hello@londonaccommodation4u.com
+            </span>
+          </div>
+        </address>
+        <section class="footer-list">
+
+              <h3>
+            Media:
+          </h3>
+            <iframe class="facebook" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Flondonaccommodation4u&tabs=timeline&width=340&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </nav>
+          </div>
+        </section>
+      </div>
+      <div class="right">
+        <p>2018 &copy; Tomasz Frączek</p>
+      </div>
+    </footer>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJyGbfNpO2_wMd-fEWwRJNiDjxR6HuKEo&callback=initMap"
+ type="text/javascript"></script>
+
+
+  </body>
+</html>

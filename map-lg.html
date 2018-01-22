@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/current-house.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/contact-form-lg.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <title>4 Avondale Road</title>
+
+    <script>
+    $(document).ready(function(){
+      $('.burger-holder').on('click', function(){
+        $('.navbar-list').toggleClass('open', "easeInSine");
+
+      });
+    });
+
+          function toggleNavPanel(x){
+        var panel = document.getElementById(x),
+            navarrow = document.getElementById("navarrow"), maxH="40px";
+        if(panel.style.height == maxH){
+            panel.style.height = "0px";
+            navarrow.innerHTML = "&#9662;";
+        } else {
+            panel.style.height = maxH;
+            navarrow.innerHTML = "&#9652;";
+        }
+    }
+
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+
+    </script>
+
+
+  </head>
+  <body><div class="top-menu">
+    <ul class="top-list">
+  <img class="pict" src="img/phone-receiver.png">
+      <li class="number"> +44(0)2079989386</li>
+      <li><a href="abaut.html">About Us</a></li>
+      <li>
+        <a onclick="toggleNavPanel('sections_panel')" href="#">Select Language <span id="navarrow">&#9662;</span></a>
+        <div id="sections_panel">
+          <ul class="lng">
+            <li><a href="esp.html">Español</a></li>
+            <li><a href="eng.html">English</a></li>
+            <li><a href="fr.html">Français</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+  <nav class="navbar">
+
+  <div class="navbar-branding">
+    <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+  </div>
+
+  <a class="burger-nav">
+    <div class="burger-holder" onclick="myFunction(this)">
+      <div class="burger bar1"></div>
+      <div class="burger bar2"></div>
+      <div class="burger bar3"></div>
+    </div>
+  </a>
+
+  <ul class="navbar-list">
+    <li><a href="index.html">home</a></li>
+    <li><a href="accommodations.html">our houses</a></li>
+    <li><a href="viewing.html">Book a Viewing</a></li>
+    <li><a href="book-a-room.html">Book a Room</a></li>
+    <li><a href="quote.html">Get a Quote</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+
+</nav>
+
+<!--midle section==============================-->
+
+
+  <div class="h1-header">
+    <h1>Full Map View</h1>
+  </div>
+<div class="add_wrapper">
+
+ <div class="add_header">
+   <div class="add_address">
+     <p>Here you can see all of our houses on one map.</p>
+   </div>
+</div>
+
+
+<div id="map"></div>
+</div>
+</div>
+
+
+  <!--========================================
+  footer-->
+
+
+
+
+    <footer class="pfooter">
+      <div  class="page-footer">
+        <section class="about-company">
+          <h3>
+            About
+          </h3>
+          <p>
+            LA4U has more than 10 years’ experience in the accommodation finding sector for students and young professionals.
+          </p>
+          <p>
+            LA4U provides a wide range of houses suited for different budgets in zones 2, 3 and 4 in London.
+          </p>
+        </section>
+
+        <nav class="footer-list">
+          <h3>
+            Menu:
+          </h3>
+          <ul class="footer-wrapper">
+            <li class="footer-item">
+              <a href="about.html">
+                About Us
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="accommodations.html">
+                Our Houses
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="viewing.html">
+                Book a Viewing
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="#book-a-room.html">
+                Book a Room
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="quote.html">
+                Get a Quote
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="map-lg.html">
+                View on Map
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="contact.html">
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <address class="footer-list">
+          <h3>
+            Address:
+          </h3>
+          <div class="footer-wrapper">
+            <span class="footer-item">
+              Legacy Business Centre
+            </span>
+            <span class="footer-item">
+              2A Ruckholt Rd, Leyton
+            </span>
+            <span class="footer-item">
+              London E10 5NP, UK
+            </span>
+  			<span class="footer-item">
+              Phone: +44(0)2079989386
+            </span>
+            <span class="footer-item">
+              E-mail: hello@londonaccommodation4u.com
+            </span>
+          </div>
+        </address>
+        <section class="footer-list">
+
+              <h3>
+            Media:
+          </h3>
+            <iframe class="facebook" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Flondonaccommodation4u&tabs=timeline&width=340&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </nav>
+          </div>
+        </section>
+      </div>
+      <div class="right">
+        <p>2018 &copy; Tomasz Frączek</p>
+      </div>
+    </footer>
+
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJyGbfNpO2_wMd-fEWwRJNiDjxR6HuKEo&callback=initMap"
+ type="text/javascript"></script>
+
+ <script src="js/map.js"></script>
+
+  </body>
+</html>

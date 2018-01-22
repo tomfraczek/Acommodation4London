@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/card-section.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <title>LONDON ACCOMMODATION 4U</title>
+    <script>
+
+
+    $(document).ready(function(){
+      $('.burger-holder').on('click', function(){
+        $('.navbar-list').toggleClass('open', "ease");
+
+      });
+    });
+
+          function toggleNavPanel(x){
+        var panel = document.getElementById(x),
+            navarrow = document.getElementById("navarrow"), maxH="130px";
+        if(panel.style.height == maxH){
+            panel.style.height = "0px";
+            navarrow.innerHTML = "&#9662;";
+        } else {
+            panel.style.height = maxH;
+            navarrow.innerHTML = "&#9652;";
+        }
+    }
+
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+
+        </script>
+
+  </head>
+  <body>
+    <div class="top-menu">
+      <ul class="top-list">
+		<img class="pict" src="img/phone-receiver.png">
+        <li class="number"> +44(0)2079989386</li>
+        <li><a href="abaut.html">About Us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li>
+          <a onclick="toggleNavPanel('sections_panel')" href="#">Select Language <span id="navarrow">&#9662;</span></a>
+          <div id="sections_panel">
+            <ul class="lng">
+              <li><a href="esp.html">Español</a></li>
+              <li><a href="eng.html">English</a></li>
+              <li><a href="fr.html">Français</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+    <nav class="navbar">
+
+    <div class="navbar-branding">
+      <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+    </div>
+
+    <a class="burger-nav">
+      <div class="burger-holder" onclick="myFunction(this)">
+        <div class="burger bar1"></div>
+        <div class="burger bar2"></div>
+        <div class="burger bar3"></div>
+      </div>
+    </a>
+
+    <ul class="navbar-list">
+      <li><a class="current" href="index.html">home</a></li>
+      <li><a href="accommodations.html">our houses</a></li>
+      <li><a href="viewing.html">Book a Viewing</a></li>
+      <li><a href="book-a-room.html">Book a Room</a></li>
+      <li><a href="quote.html">Get a Quote</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+  </nav>
+
+
+
+<section class="main-pic">
+  <div class="the-picture">
+    <div class="box">
+      <p>rent affordable rooms in our shared houses<br /> in London!</p>
+        <div class="midle">
+          <div class="col-md-3 col-sm-3 col-xs-6 one"> <a href="viewing.html" class="btn btn-sm animated-button victoria-one">Book a Viewing</a> </div>
+          <div class="col-md-3 col-sm-3 col-xs-6 two"> <a href="quote.html" class="btn btn-sm animated-button victoria-two">Get a Quote</a> </div>
+        </div>
+		<div class="fee">
+        <p><img src="img/approve.png">ALL BILS INCLUDED</p>
+        <p><img src="img/payment.png">NO AGENCY FEE</p>
+        <p><img src="img/wifi.png">FREE WI-FI</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+<section class="card-section">
+
+    <div class="h1-header">
+      <h1>Our Rental Houses</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="view-more">
+        <a href="accommodations.html">View all of our houses &rangle;&rangle;</a>
+      </div>
+    </div>
+    <div class="card card-1">
+      <div class="overflow">
+        <a href="4avondale.html">
+          <div class="plate"></div></a>
+          <div class="pic-price">
+            From &pound;125.00
+          </div>
+      </div>
+        <div class="card-info">
+          <span><a href="4avondale.html"><span class="title">4 Avondale Road</span></a></span>
+          <span><img src="img/houses/london-metro-logo.png">
+          Walthamstow Central</span>
+          <span><img src="img/houses/ico-bed.png">
+          6<img src="img/houses/bathtub-with-opened-shower.png">
+          3</span>
+          <div class="col-md-3 col-sm-3 col-xs-6"> <a href="4avondale.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+        </div>
+    </div>
+
+
+    <div class="card card-2">
+      <div class="overflow">
+        <a href="7sidmouth.html">
+          <div class="plate"></div></a>
+          <div class="pic-price">
+            From &pound;100.00
+          </div>
+      </div>
+        <div class="card-info">
+          <span><a href="7sidmouth.html"><span class="title">7 Sidmouth Road</span></a></span>
+          <span><img src="img/houses/london-metro-logo.png">
+          Leyton</span>
+          <span><img src="img/houses/ico-bed.png">
+          5<img src="img/houses/bathtub-with-opened-shower.png">
+          2</span>
+          <div class="col-md-3 col-sm-3 col-xs-6"> <a href="7sidmouth.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+        </div>
+    </div>
+
+
+    <div class="card card-3">
+      <div class="overflow">
+        <a href="12travistock.html">
+          <div class="plate"></div></a>
+          <div class="pic-price">
+            From &pound;125.00
+          </div>
+      </div>
+        <div class="card-info">
+          <span><a href="12travistock.html"><span class="title">12 Tavistock Road</span></a></span>
+          <span><img src="img/houses/london-metro-logo.png">
+          Forest Gate</span>
+          <span><img src="img/houses/ico-bed.png">
+          4<img src="img/houses/bathtub-with-opened-shower.png">
+          2</span>
+          <div class="col-md-3 col-sm-3 col-xs-6"> <a href="12travistock.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+        </div>
+    </div>
+
+
+    <div class="card card-4">
+      <div class="overflow">
+        <a href="21colvilleg.html">
+          <div class="plate"></div></a>
+          <div class="pic-price">
+            From &pound;125.00
+          </div>
+      </div>
+        <div class="card-info">
+          <span><a href="21colvilleg.html"><span class="title">21 Colville Road Ground Flor</span></a></span>
+          <span><img src="img/houses/london-metro-logo.png">
+          Leyton</span>
+          <span><img src="img/houses/ico-bed.png">
+          4<img src="img/houses/bathtub-with-opened-shower.png">
+          1</span>
+          <div class="col-md-3 col-sm-3 col-xs-6"> <a href="21colvilleg.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+        </div>
+  </section>
+
+  <footer class="pfooter">
+    <div  class="page-footer">
+      <section class="about-company">
+        <h3>
+          About Us
+        </h3>
+        <p>
+          LA4U has more than 10 years’ experience in the accommodation finding sector for students and young professionals.
+        </p>
+        <p>
+          LA4U provides a wide range of houses suited for different budgets in zones 2, 3 and 4 in London.
+        </p>
+      </section>
+
+      <nav class="footer-list">
+        <h3>
+          Menu
+        </h3>
+        <ul class="footer-wrapper">
+          <li class="footer-item">
+            <a href="about.html">
+              About Us
+            </a>
+          </li>
+          <li class="footer-item">
+            <a href="accommodations.html">
+              Our Houses
+            </a>
+          </li>
+          <li class="footer-item">
+            <a href="viewing.html">
+              Book a Viewing
+            </a>
+          </li>
+          <li class="footer-item">
+            <a href="#book-a-room.html">
+              Book a Room
+            </a>
+          </li>
+          <li class="footer-item">
+            <a href="quote.html">
+              Get a Quote
+            </a>
+          </li>
+          <li class="footer-item">
+            <a href="map-lg.html">
+              View on Map
+            </a>
+          </li>
+          <li class="footer-item">
+            <a href="contact.html">
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <address class="footer-list">
+        <h3>
+          Address
+        </h3>
+        <div class="footer-wrapper">
+          <span class="footer-item">
+            Legacy Business Centre
+          </span>
+          <span class="footer-item">
+            2A Ruckholt Rd, Leyton
+          </span>
+          <span class="footer-item">
+            London E10 5NP, UK
+          </span>
+			<span class="footer-item">
+            Phone: +44(0)2079989386
+          </span>
+          <span class="footer-item">
+            E-mail: hello@londonaccommodation4u.com
+          </span>
+        </div>
+      </address>
+      <section class="footer-list">
+
+            <h3>
+          Media
+        </h3>
+          <iframe class="facebook" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Flondonaccommodation4u&tabs=timeline&width=340&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+          </nav>
+        </div>
+      </section>
+    </div>
+    <div class="right">
+      <p>2018 &copy; Tomasz Frączek</p>
+    </div>
+  </footer>
+
+  </body>
+</html>

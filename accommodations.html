@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/card-section.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+
+  <title>LONDON ACCOMMODATION 4U</title>
+  <script>
+
+
+  $(document).ready(function(){
+    $('.burger-holder').on('click', function(){
+      $('.navbar-list').toggleClass('open', "easeInSine");
+
+    });
+  });
+
+        function toggleNavPanel(x){
+      var panel = document.getElementById(x),
+          navarrow = document.getElementById("navarrow"), maxH="40px";
+      if(panel.style.height == maxH){
+          panel.style.height = "0px";
+          navarrow.innerHTML = "&#9662;";
+      } else {
+          panel.style.height = maxH;
+          navarrow.innerHTML = "&#9652;";
+      }
+  }
+
+  function myFunction(x) {
+      x.classList.toggle("change");
+  }
+
+      </script>
+
+</head>
+    <body><div class="top-menu">
+      <ul class="top-list">
+		<img class="pict" src="img/phone-receiver.png">
+        <li class="number"> +44(0)2079989386</li>
+        <li><a href="abaut.html">About Us</a></li>
+        <li>
+          <a onclick="toggleNavPanel('sections_panel')" href="#">Select Language <span id="navarrow">&#9662;</span></a>
+          <div id="sections_panel">
+            <ul class="lng">
+              <li><a href="esp.html">Español</a></li>
+              <li><a href="eng.html">English</a></li>
+              <li><a href="fr.html">Français</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+    <nav class="navbar">
+
+    <div class="navbar-branding">
+      <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+    </div>
+
+    <a class="burger-nav">
+      <div class="burger-holder" onclick="myFunction(this)">
+        <div class="burger bar1"></div>
+        <div class="burger bar2"></div>
+        <div class="burger bar3"></div>
+      </div>
+    </a>
+
+    <ul class="navbar-list">
+      <li><a href="index.html">home</a></li>
+      <li><a class="current" href="accommodations.html">our houses</a></li>
+      <li><a href="viewing.html">Book a Viewing</a></li>
+      <li><a href="book-a-room.html">Book a Room</a></li>
+      <li><a href="quote.html">Get a Quote</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+  </nav>
+
+
+
+
+
+
+
+
+
+  <!--houses list===========================================-->
+
+
+
+  <div class="h1-header">
+    <h1>Our Rental Houses</h1>
+  </div>
+
+
+  <section class="card-section">
+      <div class="card card-1">
+        <div class="overflow">
+          <a href="4avondale.html">
+            <div class="plate"></div></a>
+            <div class="pic-price">
+              From &pound;125.00
+            </div>
+        </div>
+          <div class="card-info">
+            <span><a href="4avondale.html"><span class="title">4 Avondale Road</span></a></span>
+            <span><img src="img/houses/london-metro-logo.png">
+            Walthamstow Central</span>
+            <span><img src="img/houses/ico-bed.png">
+            6<img src="img/houses/bathtub-with-opened-shower.png">
+            3</span>
+            <div class="col-md-3 col-sm-3 col-xs-6"> <a href="4avondale.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+          </div>
+      </div>
+
+
+      <div class="card card-2">
+        <div class="overflow">
+          <a href="7sidmouth.html">
+            <div class="plate"></div></a>
+            <div class="pic-price">
+              From &pound;100.00
+            </div>
+        </div>
+          <div class="card-info">
+            <span><a href="7sidmouth.html"><span class="title">7 Sidmouth Road</span></a></span>
+            <span><img src="img/houses/london-metro-logo.png">
+            Leyton</span>
+            <span><img src="img/houses/ico-bed.png">
+            5<img src="img/houses/bathtub-with-opened-shower.png">
+            2</span>
+            <div class="col-md-3 col-sm-3 col-xs-6"> <a href="7sidmouth.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+          </div>
+      </div>
+
+
+      <div class="card card-3">
+        <div class="overflow">
+          <a href="12travistock.html">
+            <div class="plate"></div></a>
+            <div class="pic-price">
+              From &pound;120.00
+            </div>
+        </div>
+          <div class="card-info">
+            <span><a href="12travistock.html"><span class="title">12 Tavistock Road</span></a></span>
+            <span><img src="img/houses/london-metro-logo.png">
+            Forest Gate</span>
+            <span><img src="img/houses/ico-bed.png">
+            4<img src="img/houses/bathtub-with-opened-shower.png">
+            2</span>
+            <div class="col-md-3 col-sm-3 col-xs-6"> <a href="12travistock.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+          </div>
+      </div>
+
+      <div class="card card-5">
+        <div class="overflow">
+          <a href="22poppleton.html">
+            <div class="plate"></div></a>
+            <div class="pic-price">
+              From &pound;95.00
+            </div>
+        </div>
+          <div class="card-info">
+            <span><a href="22poppleton.html"><span class="title">22 Poppleton Road</span></a></span>
+            <span><img src="img/houses/london-metro-logo.png">
+            Leytonestone</span>
+            <span><img src="img/houses/ico-bed.png">
+            7<img src="img/houses/bathtub-with-opened-shower.png">
+            3</span>
+            <div class="col-md-3 col-sm-3 col-xs-6"> <a href="22poppleton.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+          </div>
+      </div>
+
+
+      <div class="card card-6">
+        <div class="overflow">
+          <a href="33farmilo.html">
+            <div class="plate"></div></a>
+            <div class="pic-price">
+              From &pound;110.00
+            </div>
+        </div>
+          <div class="card-info">
+            <span><a href="33farmilo.html"><span class="title">33 Farmilo Road</span></a></span>
+            <span><img src="img/houses/london-metro-logo.png">
+            Walthamstow Central</span>
+            <span><img src="img/houses/ico-bed.png">
+            5<img src="img/houses/bathtub-with-opened-shower.png">
+            2</span>
+            <div class="col-md-3 col-sm-3 col-xs-6"> <a href="33farmilo.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+          </div>
+      </div>
+
+
+      <div class="card card-7">
+        <div class="overflow">
+          <a href="40richmond.html">
+            <div class="plate"></div></a>
+            <div class="pic-price">
+              From &pound;120.00
+            </div>
+        </div>
+          <div class="card-info">
+            <span><a href="40richmond.html"><span class="title">40 Richmond Road</span></a></span>
+            <span><img src="img/houses/london-metro-logo.png">
+            Leytonstone</span>
+            <span><img src="img/houses/ico-bed.png">
+            7<img src="img/houses/bathtub-with-opened-shower.png">
+            1</span>
+            <div class="col-md-3 col-sm-3 col-xs-6"> <a href="40richmond.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+          </div>
+      </div>
+
+
+    <div class="card card-8">
+      <div class="overflow">
+        <a href="45colville.html">
+          <div class="plate"></div></a>
+          <div class="pic-price">
+            From &pound;95.00
+          </div>
+      </div>
+        <div class="card-info">
+          <span><a href="45colville.html"><span class="title">45 Colville Road</span></a></span>
+          <span><img src="img/houses/london-metro-logo.png">
+          Leyton</span>
+          <span><img src="img/houses/ico-bed.png">
+          4<img src="img/houses/bathtub-with-opened-shower.png">
+          2</span>
+          <div class="col-md-3 col-sm-3 col-xs-6"> <a href="45colville.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+        </div>
+    </div>
+
+
+      <div class="card card-9">
+        <div class="overflow">
+          <a href="55lascotts.html">
+            <div class="plate"></div></a>
+            <div class="pic-price">
+              From &pound;110.00
+            </div>
+        </div>
+          <div class="card-info">
+            <span><a href="55lascotts.html"><span class="title">55 Lascotts Road</span></a></span>
+            <span><img src="img/houses/london-metro-logo.png">
+            Bounds Green</span>
+            <span><img src="img/houses/ico-bed.png">
+            5<img src="img/houses/bathtub-with-opened-shower.png">
+            2</span>
+            <div class="col-md-3 col-sm-3 col-xs-6"> <a href="55lascotts.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+          </div>
+      </div>
+
+
+      <div class="card card-10">
+        <div class="overflow">
+          <a href="55morley.html">
+            <div class="plate"></div></a>
+            <div class="pic-price">
+              From &pound;125.00
+            </div>
+        </div>
+          <div class="card-info">
+            <span><a href="55morley.html"><span class="title">55 Morley Road</span></a></span>
+            <span><img src="img/houses/london-metro-logo.png">
+            Leyton</span>
+            <span><img src="img/houses/ico-bed.png">
+            5<img src="img/houses/bathtub-with-opened-shower.png">
+            1</span>
+            <div class="col-md-3 col-sm-3 col-xs-6"> <a href="55morley.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+          </div>
+      </div>
+
+
+      <div class="card card-11">
+        <div class="overflow">
+          <a href="57vanisttart.html">
+            <div class="plate"></div></a>
+            <div class="pic-price">
+              From &pound;120.00
+            </div>
+        </div>
+          <div class="card-info">
+            <span><a href="57vanisttart.html"><span class="title">57 Vansittart Road</span></a></span>
+            <span><img src="img/houses/london-metro-logo.png">
+            Forest Gate</span>
+            <span><img src="img/houses/ico-bed.png">
+            5<img src="img/houses/bathtub-with-opened-shower.png">
+            1</span>
+            <div class="col-md-3 col-sm-3 col-xs-6"> <a href="57vanisttart.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+          </div>
+      </div>
+
+
+      <div class="card card-12">
+        <div class="overflow">
+          <a href="58belgrave.html">
+            <div class="plate"></div></a>
+            <div class="pic-price">
+              From &pound;120.00
+            </div>
+        </div>
+          <div class="card-info">
+            <span><a href="58belgrave.html"><span class="title">58 Belgrave Road</span></a></span>
+            <span><img src="img/houses/london-metro-logo.png">
+            Walthamstow Central</span>
+            <span><img src="img/houses/ico-bed.png">
+            4<img src="img/houses/bathtub-with-opened-shower.png">
+            2</span>
+            <div class="col-md-3 col-sm-3 col-xs-6"> <a href="58belgrave.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+          </div>
+      </div>
+
+
+      <div class="card card-13">
+        <div class="overflow">
+          <a href="66huxley.html">
+            <div class="plate"></div></a>
+            <div class="pic-price">
+              From &pound;100.00
+            </div>
+        </div>
+          <div class="card-info">
+            <span><a href="66huxley.html"><span class="title">66 Huxley Road</span></a></span>
+            <span><img src="img/houses/london-metro-logo.png">
+            Leyton</span>
+            <span><img src="img/houses/ico-bed.png">
+            7<img src="img/houses/bathtub-with-opened-shower.png">
+            3</span>
+            <div class="col-md-3 col-sm-3 col-xs-6"> <a href="66huxley.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+          </div>
+      </div>
+
+
+      <div class="card card-14">
+        <div class="overflow">
+          <a href="107calderon.html">
+            <div class="plate"></div></a>
+            <div class="pic-price">
+              From &pound;120.00
+            </div>
+        </div>
+          <div class="card-info">
+            <span><a href="107calderon.html"><span class="title">107 Calderon Road</span></a></span>
+            <span><img src="img/houses/london-metro-logo.png">
+            Leyton</span>
+            <span><img src="img/houses/ico-bed.png">
+            5<img src="img/houses/bathtub-with-opened-shower.png">
+            2</span>
+            <div class="col-md-3 col-sm-3 col-xs-6"> <a href="107calderon.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+          </div>
+      </div>
+
+
+      <div class="card card-15">
+        <div class="overflow">
+          <a href="110napier.html">
+            <div class="plate"></div></a>
+            <div class="pic-price">
+              From &pound;110.00
+            </div>
+        </div>
+          <div class="card-info">
+            <span><a href="110napier.html"><span class="title">110 Napier Road</span></a></span>
+            <span><img src="img/houses/london-metro-logo.png">
+            Leyton</span>
+            <span><img src="img/houses/ico-bed.png">
+            5<img src="img/houses/bathtub-with-opened-shower.png">
+            1</span>
+            <div class="col-md-3 col-sm-3 col-xs-6"> <a href="110napier.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+          </div>
+      </div>
+
+
+    <div class="card card-16">
+      <div class="overflow">
+        <a href="116murchinson.html">
+          <div class="plate"></div></a>
+          <div class="pic-price">
+            From &pound;125.00
+          </div>
+      </div>
+        <div class="card-info">
+          <span><a href="116murchinson.html"><span class="title">116 Murchinson Road</span></a></span>
+          <span><img src="img/houses/london-metro-logo.png">
+          Leyton</span>
+          <span><img src="img/houses/ico-bed.png">
+          3<img src="img/houses/bathtub-with-opened-shower.png">
+          1</span>
+          <div class="col-md-3 col-sm-3 col-xs-6"> <a href="116murchinson.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+        </div>
+    </div>
+
+
+      <div class="card card-17">
+        <div class="overflow">
+          <a href="227ramsay.html">
+            <div class="plate"></div></a>
+            <div class="pic-price">
+              From &pound;115.00
+            </div>
+        </div>
+          <div class="card-info">
+            <span><a href="227ramsay.html"><span class="title">227 Ramsay Road</span></a></span>
+            <span><img src="img/houses/london-metro-logo.png">
+            Forest Gate</span>
+            <span><img src="img/houses/ico-bed.png">
+            6<img src="img/houses/bathtub-with-opened-shower.png">
+            3</span>
+            <div class="col-md-3 col-sm-3 col-xs-6"> <a href="227ramsay.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+          </div>
+      </div>
+
+            <div class="card card-4">
+              <div class="overflow">
+                <a href="21colvilleg.html">
+                  <div class="plate"></div></a>
+                  <div class="pic-price">
+                    From &pound;125.00
+                  </div>
+              </div>
+                <div class="card-info">
+                  <span><a href="21colvilleg.html"><span class="title">21 Colville Road Ground Flor</span></a></span>
+                  <span><img src="img/houses/london-metro-logo.png">
+                  Leyton</span>
+                  <span><img src="img/houses/ico-bed.png">
+                  2<img src="img/houses/bathtub-with-opened-shower.png">
+                  1</span>
+                  <div class="col-md-3 col-sm-3 col-xs-6"> <a href="21colvilleg.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+                </div>
+            </div>
+
+
+            <div class="card card-19">
+              <div class="overflow">
+                <a href="21colvillef.html">
+                  <div class="plate"></div></a>
+                  <div class="pic-price">
+                    From &pound;120.00
+                  </div>
+              </div>
+                <div class="card-info">
+                  <span><a href="21colvillef.html"><span class="title">21 Colville Road 1st Flor</span></a></span>
+                  <span><img src="img/houses/london-metro-logo.png">
+                  Leyton</span>
+                  <span><img src="img/houses/ico-bed.png">
+                  4<img src="img/houses/bathtub-with-opened-shower.png">
+                  1</span>
+                  <div class="col-md-3 col-sm-3 col-xs-6"> <a href="21colvillef.html" class="btn btn-sm animated-button-sm victoria-three">view property</a> </div>
+                </div>
+            </div>
+
+    </section>
+
+
+      <footer class="pfooter">
+        <div  class="page-footer">
+          <section class="about-company">
+            <h3>
+              About
+            </h3>
+            <p>
+              LA4U has more than 10 years’ experience in the accommodation finding sector for students and young professionals.
+            </p>
+            <p>
+              LA4U provides a wide range of houses suited for different budgets in zones 2, 3 and 4 in London.
+            </p>
+          </section>
+
+          <nav class="footer-list">
+            <h3>
+              Menu:
+            </h3>
+            <ul class="footer-wrapper">
+              <li class="footer-item">
+                <a href="about.html">
+                  About Us
+                </a>
+              </li>
+              <li class="footer-item">
+                <a href="accommodations.html">
+                  Our Houses
+                </a>
+              </li>
+              <li class="footer-item">
+                <a href="viewing.html">
+                  Book a Viewing
+                </a>
+              </li>
+              <li class="footer-item">
+                <a href="#book-a-room.html">
+                  Book a Room
+                </a>
+              </li>
+              <li class="footer-item">
+                <a href="quote.html">
+                  Get a Quote
+                </a>
+              </li>
+              <li class="footer-item">
+                <a href="map-lg.html">
+                  View on Map
+                </a>
+              </li>
+              <li class="footer-item">
+                <a href="contact.html">
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <address class="footer-list">
+            <h3>
+              Address:
+            </h3>
+            <div class="footer-wrapper">
+              <span class="footer-item">
+                Legacy Business Centre
+              </span>
+              <span class="footer-item">
+                2A Ruckholt Rd, Leyton
+              </span>
+              <span class="footer-item">
+                London E10 5NP, UK
+              </span>
+    			<span class="footer-item">
+                Phone: +44(0)2079989386
+              </span>
+              <span class="footer-item">
+                E-mail: hello@londonaccommodation4u.com
+              </span>
+            </div>
+          </address>
+          <section class="footer-list">
+
+                <h3>
+              Media:
+            </h3>
+              <iframe class="facebook" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Flondonaccommodation4u&tabs=timeline&width=340&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+              </nav>
+            </div>
+          </section>
+        </div>
+        <div class="right">
+          <p>2018 &copy; Tomasz Frączek</p>
+        </div>
+      </footer>
+
+  </body>
+</html>
