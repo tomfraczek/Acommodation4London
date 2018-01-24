@@ -10,8 +10,21 @@
 	border:1px solid #CCC;
 	background:#FFF;
 	margin:0 0 5px;
-	padding:10px;
+	padding:9px;
 }
+
+#contact #size-s{
+  box-sizing: border-box;
+  width:50%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:9px;
+}
+
+
+
+
 
 #map-s{
   width: 45%;
@@ -60,12 +73,30 @@
 	width: 50%;
 }
 
+.fieldfs {
+	border: medium none;
+	margin: 0 0 10px;
+	padding: 0;
+	width: 25%;
+}
+
 .fieldr {
 	border: medium none;
 	margin: 0 0 10px;
 	padding: 0;
 	width: 100%;
 }
+
+.price{
+  cursor:default;
+}
+
+.note{
+  width: 100%;
+  text-transform: capitalize;
+  color: #062330
+}
+
 
 #contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
 	-webkit-transition:border-color 0.3s ease-in-out;
