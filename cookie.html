@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book a Viewing - London Accommodation 4 U</title>
+
+    <link rel="stylesheet" type="text/css" href="js/jquery-ui.min.css" />
+
+
+
+    <link rel="stylesheet" type="text/css" href="css/current-house.css" />
+    <link rel="stylesheet" type="text/css" href="css/contact-form-lg.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+
+<script>
+
+$(document).ready(function(){
+  $('.burger-holder').on('click', function(){
+    $('.navbar-list').toggleClass('open', "easeInSine");
+
+  });
+});
+
+      function toggleNavPanel(x){
+    var panel = document.getElementById(x),
+        navarrow = document.getElementById("navarrow"), maxH="40px";
+    if(panel.style.height == maxH){
+        panel.style.height = "0px";
+        navarrow.innerHTML = "&#9662;";
+    } else {
+        panel.style.height = maxH;
+        navarrow.innerHTML = "&#9652;";
+    }
+}
+
+function myFunction(x) {
+    x.classList.toggle("change");
+}
+
+  //data pickers
+
+  $( function() {
+  $( "#checkin" ).datepicker();
+  } );
+
+  $( function() {
+  $( "#checkout" ).datepicker();
+  } );
+
+  $( function() {
+    $( "#birth" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  } );
+
+
+//map
+      function initMap() {
+        var uluru = {lat: 51.557619, lng: -0.009061};
+        var newCenter = {lat: 51.631171, lng: -0.009794};
+        var map = new google.maps.Map(document.getElementById('map-s'), {
+          zoom: 10,
+          center: newCenter
+        });
+
+        var imgIcon = './img/orange-icon.png';
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+          icon: imgIcon
+        });
+
+        // Info window content
+    var infoWindowContent = '<div class="info_content">' +
+        '<h3>Contact Detals:</h3>' + '<img src="img/logo.png" class="mini-map-img">' +
+        '<p>Legacy Business Centre</p>' + '<p>2A Ruckholt Rd, Leyton</p>' + '<p>London E10 5NP, UK</p>' + '<p>+44(0)2079989386</p>' +  '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: infoWindowContent
+        });
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+        infowindow.open(map,marker);
+      }
+
+
+    </script>
+  </head>
+  <body>
+
+    <div class="top-menu">
+      <ul class="top-list">
+		<img class="pict" src="img/phone-receiver.png">
+        <li class="number"> +44(0)2079989386</li>
+        <li><a href="about.html">About Us</a></li>
+        <li>
+          <a onclick="toggleNavPanel('sections_panel')" href="#">Select Language <span id="navarrow">&#9662;</span></a>
+          <div id="sections_panel">
+            <ul class="lng">
+              <li><a href="esp.html">Español</a></li>
+              <li><a href="eng.html">English</a></li>
+              <li><a href="fr.html">Français</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+    <nav class="navbar">
+
+    <div class="navbar-branding">
+      <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+    </div>
+
+    <a class="burger-nav">
+      <div class="burger-holder" onclick="myFunction(this)">
+        <div class="burger bar1"></div>
+        <div class="burger bar2"></div>
+        <div class="burger bar3"></div>
+      </div>
+    </a>
+
+    <ul class="navbar-list">
+      <li><a href="index.html">home</a></li>
+      <li><a href="accommodations.html">our houses</a></li>
+      <li><a href="viewing.html">Book a Viewing</a></li>
+      <li><a class="current" href="book-a-room.html">Book a Room</a></li>
+      <li><a href="quote.html">Get a Quote</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+  </nav>
+
+<!--midle section==============================-->
+
+<div class="h1-header">
+    <h1>Privacy &amp; Cookies</h1>
+</div>
+<div class="add_wrapper cookie">
+
+  <p>London Accommodation 4 u Ltd (we, us or our) are committed to ensuring that your privacy is protected and respected. This Privacy Policy (together with our Website Terms and Conditions of Use and any other documents referred to in it) sets out the basis on which any personal data we may collect from you, or that you provide to us, will be processed.</p>
+
+ <p>Please read the following carefully. By visiting www.londonaccommodation4u.com  (the Website) you are accepting and consenting to the practices described in this Privacy Policy.</p>
+
+ <p>We recognise the importance of protecting the privacy of individual-specific information ("Personal Information") collected about our residents and prospective residents (referred to as "Residents", "you" or "your"). This privacy statement discloses what Personal Information we gather, how we use it, and how you can correct or change it. It is our intention to give you as much control over your Personal Information as possible to preserve your privacy, while still allowing us to utilise that Personal Information in the course of our business to provide you a valuable service and hopefully to have you as a new resident of our facility. This Privacy Policy constitutes an integral part of our website’s Terms of Use and is subject to the provisions thereof, including with respect to Limitation of Liability and governing law. We encourage you to read this Privacy Policy before you send or share Personal Information with us or use our website and to read it again when we notify you of changes to the Privacy Policy that are made from time to time.
+ </p>
+
+ <p>We operate in accordance with applicable data protection legislation and is registered with the Information Commissioner’s Office in the UK.</p>
+
+ <h3>WHAT WE COLLECT</h3>
+
+ <p>We may collect and process the following types of information about you:</p>
+
+ <p>Information you give us. You may give us information about you by filling in forms on the Website or by corresponding with us by phone, email or otherwise. This includes information you provide when you register to use the Website, subscribe to our newsletter, search for accommodation, place a booking on the Website, other social media functions on the Website, enter a competition, promotion or survey and when you report a problem with the Website. The information you give us may include your name, address, email address, phone number, financial and credit card information, personal description, demographic information such as preferences and interests, and other information relevant to customer surveys and/or offers.</p>
+
+ <p>Information we collect about you. We may automatically collect the following information after each of your visits to the Website:</p>
+
+  <p>• Technical information, including your Internet protocol (IP) address, your operating system and platform, browser type and version, and referrer website, as well as your login information and time zone settings.</p>
+  <p>• Information about your visit, including the full Uniform Resource Locators (URL) clickstream to, through and from the Website (including date and time); accommodation you viewed or searched for; on site activity and any phone number you use to call us.</p>
+ <p>Information we receive from other sources. We may receive information about you if you use any of the other services we provide. We are also working closely with third parties (including business partners, sub-contractors in technical, payment and delivery services, advertising networks, search information providers and credit reference agencies) and may receive information about you from them.</p>
+
+ <h3>COOKIES POLICY</h3>
+
+ <p>Our Website uses cookies to identify which pages are being used and to distinguish you from other users of the Website. This helps us analyse data about web page traffic and improve the Website in order to tailor it to your needs.</p>
+
+ <p>By continuing to browse the Website, you are agreeing to our use of cookies.</p>
+
+ <h3>What is a cookie?</h3>
+
+ <p>A cookie is a small file which asks permission to be placed on your computer’s hard drive. Once you agree, the file is added and the cookie helps analyse web traffic or lets you know when you visit a particular site. Cookies allow web applications to respond to you as an individual. The web application can tailor its operations to your needs, likes and dislikes by gathering and remembering information about your preferences.
+ Overall, cookies help us to provide you with a better website by enabling us to monitor which pages you find useful and which you do not. A cookie in no way gives us access to your computer or any information about you, other than the data you choose to share with us.</p>
+
+ <h3>Types of cookies we use</h3>
+
+ <p>We use the following cookies:</p>
+
+ • Strictly necessary cookies. These are cookies that are required for the operation of the Website. They include, for example, cookies that enable you to log into secure areas of the Website and make use of our electronic booking system.
+ • Analytical/performance cookies. These allow us to recognise and count the number of visitors and to see how visitors move around the Website when they are using it. This helps us to improve the way the Website works, for example, by ensuring that users are finding what they are looking for easily.
+ • Functionality cookies. These are used to recognise you when you return to the Website. This enables us to personalise our content for you and remember your preferences (for example, your choice of language).
+ • Targeting cookies. These cookies record your visit to the Website, the pages you have visited and the links you have followed. We will use this information to make the Website and the advertising displayed on it more relevant to your interests. We may also share this information with third parties for this purpose.
+ Disabling cookies
+
+ <p>If you do not wish to accept cookies on your machine, you can disable them by adjusting the settings on your browser. This may, however, prevent you from taking full advantage of the Website.</p>
+
+ <h3>WHAT WE DO WITH THE INFORMATION WE GATHER</h3>
+
+ <p>We use information held about you to understand your needs and provide you with a better service. In particular, we will use your information for the following general purposes:</p>
+
+ <p>• For registering your account with us. We will use the information you provide to us when you register on the Website to set up and maintain your account. We may also obtain information about you from other sources and add this to your account profile for example, updated contact details.</p>
+ <p>• For fulfilling bookings. When you place a booking via the Website, we will use your information to process the requested transaction, fulfil your booking and provide you with the service you expect.</p>
+ <p>• For responding to your queries. We may use your customer information to respond to your queries for example, about a booking or problems logging on, navigating the Website or accessing your account. In order to address your query you may be contacted by email, over the telephone, or other communication method by a member of our team. We may also use your contact details to send you follow-up information about a booking and promotions.</p>
+ <p>• For improving your onsite experience and providing you with information about accommodation and services, special offers and promotions: We use the information gathered from your cookie file (see our Cookies Policy above) in conjunction with other personal information provided by you, so that we can create a more effective Website by assessing content and traffic flows on the Website. We use this information to provide you with a more personalised experience. When you register your account or place a booking via the Website, we may use your personal information to contact you with details of special offers, promotions and other information and to send you our newsletters where we think these will be of interest and you have consented to receiving promotional communications. You can change your preferences and unsubscribe from such communications at any time by emailing us at requests@bethnalstudentliving.com.</p>
+ <p>• For internal operations and analysis: We may also use your personal information for internal administration, analysis and quality assurance purposes, including fraud prevention.</p>
+
+ <h3>SHARING PERSONAL INFORMATION</h3>
+
+ <p>We will not sell or lease your personal information to third parties unless we have your permission or are required by law to do so.
+ We may share your information with selected third parties as necessary for business administration, customer performance, marketing and operational, analytical, quality assurance and (though only in relation to anonymised data) marketing assistance (for example, to explore consumer trends) or other purposes as set out below.</p>
+
+ • Compliance with laws and regulations. We may disclose your personal information to third parties, such as official bodies and our professional advisers, as far as we believe it is necessary: (i) to comply with relevant laws, orders or regulations; (ii) to enforce our Website Terms and Conditions of Use or other contractual agreements; and (iii) to protect our property and other rights, including those of our group companies and customers and others.
+ • Credit reference agencies and payment processors: When you make a booking on the Website, we will automatically pass certain personal information which you provide to us (for example, your name, credit card, billing address details) to third party credit reference agencies, payment processors or other third parties for the specific purpose of verifying that information.
+
+ <h3>SECURITY</h3>
+
+ <p>We are committed to ensuring that your personal information is secure. In order to prevent unauthorised access or disclosure, we have put in place suitable physical, electronic and managerial procedures to safeguard and secure the personal information we collect online.</p>
+
+ <h3>LINKS TO OTHER WEBSITES</h3>
+
+ <p>The Website may contain links to other websites of interest. Once you have used these links to leave the Website, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting such sites and such sites are not governed by this privacy policy. You should exercise caution and look at the privacy statement applicable to the website in question.</p>
+
+ <h3>ACCESS TO PERSONAL INFORMATION</h3>
+
+ <p>You can view and change your account settings and information at any time by accessing your online account and updating the details. The Data Protection Act also gives you the right to access and receive a copy of the personal information which we hold about you, subject to a fee of £10.00 which covers our costs in providing you with the information. If you would like a copy of the information held on you please write to London Accommodation 4 u Ltd at Suite 221, The Legacy Business Centre, 2A Ruckholt Road, Leyton, E10 5NP, London. If you believe that any information we are holding on you is incorrect or incomplete, please write to us at the above address or email us at admin@londonaccommodation4u.com  as soon as possible. We will promptly correct any information found to be incorrect.</p>
+
+ <h3>CHANGES TO OUR PRIVACY POLICY</h3>
+
+ <p>We may change this Privacy Policy from time to time by updating this page. You should check this page frequently to see any updates and to ensure that you are happy with any changes.</p>
+
+
+</div>
+
+
+  <!--========================================
+  footer-->
+
+
+
+
+
+    <footer class="pfooter">
+      <div  class="page-footer">
+        <section class="about-company">
+          <h3>
+            About
+          </h3>
+          <p>
+            LA4U has more than 10 years’ experience in the accommodation finding sector for students and young professionals.
+          </p>
+          <p>
+            LA4U provides a wide range of houses suited for different budgets in zones 2, 3 and 4 in London.
+          </p>
+        </section>
+
+        <nav class="footer-list">
+          <h3>
+            Menu:
+          </h3>
+          <ul class="footer-wrapper">
+            <li class="footer-item">
+              <a href="about.html">
+                About Us
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="accommodations.html">
+                Our Houses
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="viewing.html">
+                Book a Viewing
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="#book-a-room.html">
+                Book a Room
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="quote.html">
+                Get a Quote
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="map-lg.html">
+                View on Map
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="contact.html">
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <address class="footer-list">
+          <h3>
+            Address:
+          </h3>
+          <div class="footer-wrapper">
+            <span class="footer-item">
+              Legacy Business Centre
+            </span>
+            <span class="footer-item">
+              2A Ruckholt Rd, Leyton
+            </span>
+            <span class="footer-item">
+              London E10 5NP, UK
+            </span>
+  			<span class="footer-item">
+              Phone: +44(0)2079989386
+            </span>
+            <span class="footer-item">
+              E-mail: hello@londonaccommodation4u.com
+            </span>
+          </div>
+        </address>
+        <section class="footer-list">
+
+              <h3>
+            Media:
+          </h3>
+            <iframe class="facebook" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Flondonaccommodation4u&tabs=timeline&width=340&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </nav>
+          </div>
+        </section>
+      </div>
+      <div class="right">
+        <p>2018 &copy; Tomasz Frączek</p>
+      </div>
+    </footer>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJyGbfNpO2_wMd-fEWwRJNiDjxR6HuKEo&callback=initMap"
+ type="text/javascript"></script>
+
+
+  </body>
+</html>
