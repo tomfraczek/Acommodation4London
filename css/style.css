@@ -91,7 +91,7 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 
 .navbar-branding img{
   margin-right: 10px;
-  height: 100px;
+  height: 70px;
 }
 
 .navbar,.navbar-list, .navbar-list a {
@@ -116,6 +116,7 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   background-color: #ffffff;
   width: 100%;
   padding: 10px 0;
+  margin-top: 20px;
 
   flex-wrap: wrap;
 }
@@ -417,6 +418,16 @@ min-height: 90px;
     text-transform: none;
   }
 
+  .h1-header-slide {
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 30px 0;
+    font-size: 16px;
+    color: #062330;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+
   .view-more{
   color: #062330;
   float: right;
@@ -649,6 +660,7 @@ min-height: 90px;
 
   .about-cont{
     width: 100%;
+    padding: 10px;
   }
 
   .about-cont p{
@@ -927,3 +939,9 @@ iframe{
 .invisible{
   display: block;
 }
+
+
+
+
+
+/*slideshow*/
