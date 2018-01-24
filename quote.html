@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Get a Quote - London Accommodation 4 U</title>
+
+    <link rel="stylesheet" type="text/css" href="js/jquery-ui.min.css" />
+
+
+
+    <link rel="stylesheet" type="text/css" href="css/current-house.css" />
+    <link rel="stylesheet" type="text/css" href="css/contact-form-lg.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+
+<script>
+
+$(document).ready(function(){
+  $('.burger-holder').on('click', function(){
+    $('.navbar-list').toggleClass('open', "easeInSine");
+
+  });
+});
+
+      function toggleNavPanel(x){
+    var panel = document.getElementById(x),
+        navarrow = document.getElementById("navarrow"), maxH="40px";
+    if(panel.style.height == maxH){
+        panel.style.height = "0px";
+        navarrow.innerHTML = "&#9662;";
+    } else {
+        panel.style.height = maxH;
+        navarrow.innerHTML = "&#9652;";
+    }
+}
+
+function myFunction(x) {
+    x.classList.toggle("change");
+}
+
+  //data pickers
+
+  $( function() {
+  $( "#checkin" ).datepicker();
+  } );
+
+  $( function() {
+  $( "#checkout" ).datepicker();
+  } );
+
+  $( function() {
+    $( "#birth" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  } );
+
+
+//map
+      function initMap() {
+        var uluru = {lat: 51.557619, lng: -0.009061};
+        var newCenter = {lat: 51.631171, lng: -0.009794};
+        var map = new google.maps.Map(document.getElementById('map-s'), {
+          zoom: 10,
+          center: newCenter
+        });
+
+        var imgIcon = './img/orange-icon.png';
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+          icon: imgIcon
+        });
+
+        // Info window content
+    var infoWindowContent = '<div class="info_content">' +
+        '<h3>Contact Detals:</h3>' + '<img src="img/logo.png" class="mini-map-img">' +
+        '<p>Legacy Business Centre</p>' + '<p>2A Ruckholt Rd, Leyton</p>' + '<p>London E10 5NP, UK</p>' + '<p>+44(0)2079989386</p>' +  '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: infoWindowContent
+        });
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+        infowindow.open(map,marker);
+      }
+
+
+    </script>
+  </head>
+  <body>
+
+    <div class="top-menu">
+      <ul class="top-list">
+		<img class="pict" src="img/phone-receiver.png">
+        <li class="number"> +44(0)2079989386</li>
+        <li><a href="about.html">About Us</a></li>
+        <li>
+          <a onclick="toggleNavPanel('sections_panel')" href="#">Select Language <span id="navarrow">&#9662;</span></a>
+          <div id="sections_panel">
+            <ul class="lng">
+              <li><a href="esp.html">Español</a></li>
+              <li><a href="eng.html">English</a></li>
+              <li><a href="fr.html">Français</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+    <nav class="navbar">
+
+    <div class="navbar-branding">
+      <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+    </div>
+
+    <a class="burger-nav">
+      <div class="burger-holder" onclick="myFunction(this)">
+        <div class="burger bar1"></div>
+        <div class="burger bar2"></div>
+        <div class="burger bar3"></div>
+      </div>
+    </a>
+
+    <ul class="navbar-list">
+      <li><a href="index.html">home</a></li>
+      <li><a href="accommodations.html">our houses</a></li>
+      <li><a href="viewing.html">Book a Viewing</a></li>
+      <li><a href="book-a-room.html">Book a Room</a></li>
+      <li><a class="current" href="quote.html">Get a Quote</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+  </nav>
+
+<!--midle section==============================-->
+
+<div class="h1-header">
+    <h1>GET A QUOTE</h1>
+</div>
+<div class="add_wrapper">
+
+ <div class="add_header">
+
+   <div class="add_address">
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+   </div>
+</div>
+
+<div class="middle">
+
+
+
+ <form class="only" id="contact" method="post">
+   <div class="note">
+     <h4>contact details</h4>
+   </div>
+   <fieldset class="fieldf">
+     <input name="user_name" placeholder="Enter First Name" type="text">
+   </fieldset>
+
+   <fieldset class="fieldf">
+     <input name="user_lastname" placeholder="Enter Last Name" type="text">
+   </fieldset>
+
+   <fieldset class="fieldf">
+     <select name="gender" id="room" placeholder="Enter Email Address">
+       <option value="">Gender</option>
+       <option value="male">Male</option>
+       <option value="female">Female</option>
+     </select>
+   </fieldset>
+
+   <fieldset class="fieldf">
+     <select name="Nationality" id="room" class="form-control" required>
+       <option> Nationality </option>
+       <option>    Afghanistan </option>
+       <option>    Albania </option>
+       <option>    Algeria </option>
+       <option>    Andorra </option>
+       <option>    Angola  </option>
+       <option>    Argentina   </option>
+       <option>    Armenia </option>
+       <option>    Australia   </option>
+       <option>    Austria </option>
+       <option>    Azerbaijan  </option>
+       <option>    Bahamas </option>
+       <option>    Bahrain </option>
+       <option>    Bangladesh  </option>
+       <option>    Barbados    </option>
+       <option>    Belarus </option>
+       <option>    Belgium </option>
+       <option>    Belize  </option>
+       <option>    Benin   </option>
+       <option>    Bhutan  </option>
+       <option>    Bolivia </option>
+       <option>    Bosnia-Herzegovina  </option>
+       <option>    Botswana    </option>
+       <option>    Brazil  </option>
+       <option>    Brunei  </option>
+       <option>    Bulgaria    </option>
+       <option>    Burkina </option>
+       <option>    Burundi </option>
+       <option>    Cambodia    </option>
+       <option>    Cameroon    </option>
+       <option>    Canada  </option>
+       <option>    Cape Verde Islands  </option>
+       <option>    Chad    </option>
+       <option>    Chile   </option>
+       <option>    China   </option>
+       <option>    Colombia    </option>
+       <option>    Congo   </option>
+       <option>    Costa Rica  </option>
+       <option>    Croatia </option>
+       <option>    Cuba    </option>
+       <option>    Cyprus  </option>
+       <option>    Czech Republic  </option>
+       <option>    Denmark </option>
+       <option>    Djibouti    </option>
+       <option>    Dominica    </option>
+       <option>    Dominican Republic  </option>
+       <option>    Ecuador </option>
+       <option>    Egypt   </option>
+       <option>    El Salvador </option>
+       <option>    England </option>
+       <option>    Eritrea </option>
+       <option>    Estonia </option>
+       <option>    Ethiopia    </option>
+       <option>    Fiji    </option>
+       <option>    Finland </option>
+       <option>    France  </option>
+       <option>    Gabon   </option>
+       <option>    Gambia</option>
+       <option>    Georgia </option>
+       <option>    Germany </option>
+       <option>    Ghana   </option>
+       <option>    Greece  </option>
+       <option>    Grenada </option>
+       <option>    Guatemala   </option>
+       <option>    Guinea  </option>
+       <option>    Guyana  </option>
+       <option>    Haiti   </option>
+       <option>    Honduras    </option>
+       <option>    Hungary </option>
+       <option>    Iceland </option>
+       <option>    India   </option>
+       <option>    Indonesia   </option>
+       <option>    Iran    </option>
+       <option>    Iraq    </option>
+       <option>    Ireland </option>
+       <option>    Italy   </option>
+       <option>    Jamaica </option>
+       <option>    Japan   </option>
+       <option>    Jordan  </option>
+       <option>    Kazakhstan  </option>
+       <option>    Kenya   </option>
+       <option>    Kuwait  </option>
+       <option>    Laos    </option>
+       <option>    Latvia  </option>
+       <option>    Lebanon </option>
+       <option>    Liberia </option>
+       <option>    Libya   </option>
+       <option>    Liechtenstein   </option>
+       <option>    Lithuania   </option>
+       <option>    Luxembourg  </option>
+       <option>    Macedonia   </option>
+       <option>    Madagascar  </option>
+       <option>    Malawi  </option>
+       <option>    Malaysia    </option>
+       <option>    Maldives    </option>
+       <option>    Mali    </option>
+       <option>    Malta   </option>
+       <option>    Mauritania  </option>
+       <option>    Mauritius   </option>
+       <option>    Mexico  </option>
+       <option>    Moldova </option>
+       <option>    Monaco  </option>
+       <option>    Mongolia    </option>
+       <option>    Montenegro  </option>
+       <option>    Morocco </option>
+       <option>    Mozambique  </option>
+       <option>    Myanmar </option>
+       <option>    Namibia </option>
+       <option>    Nepal   </option>
+       <option>    Netherlands </option>
+       <option>    New Zealand </option>
+       <option>    Nicaragua   </option>
+       <option>    Niger   </option>
+       <option>    Nigeria </option>
+       <option>    North Korea </option>
+       <option>    Norway  </option>
+       <option>    Oman    </option>
+       <option>    Pakistan    </option>
+       <option>    Panama  </option>
+       <option>    Papua New Guinea    </option>
+       <option>    Paraguay    </option>
+       <option>    Peru    </option>
+       <option>    the Philippines </option>
+       <option>    Poland  </option>
+       <option>    Portugal    </option>
+       <option>    Qatar   </option>
+       <option>    Romania </option>
+       <option>    Russia  </option>
+       <option>    Rwanda  </option>
+       <option>    Saudi Arabia    </option>
+       <option>    Senegal </option>
+       <option>    Serbia  </option>
+       <option>    Seychelles, the </option>
+       <option>    Sierra Leone    </option>
+       <option>    Singapore   </option>
+       <option>    Slovakia    </option>
+       <option>    Slovenia    </option>
+       <option>    Solomon Islands </option>
+       <option>    Somalia </option>
+       <option>    South Africa    </option>
+       <option>    South Korea </option>
+       <option>    Spain   </option>
+       <option>    Sri Lanka   </option>
+       <option>    Sudan   </option>
+       <option>    Suriname    </option>
+       <option>    Swaziland   </option>
+       <option>    Sweden  </option>
+       <option>    Switzerland </option>
+       <option>    Syria   </option>
+       <option>    Taiwan  </option>
+       <option>    Tajikistan  </option>
+       <option>    Tanzania    </option>
+       <option>    Thailand    </option>
+       <option>    Togo    </option>
+       <option>    Trinidad and Tobago </option>
+       <option>    Tunisia </option>
+       <option>    Turkey  </option>
+       <option>    Turkmenistan    </option>
+       <option>    Tuvalu  </option>
+       <option>    Uganda  </option>
+       <option>    Ukraine </option>
+       <option>    United Arab Emirates (UAE)  </option>
+       <option>    United Kingdom (UK) </option>
+       <option>    United States of America (USA)  </option>
+       <option>    Uruguay </option>
+       <option>    Uzbekistan  </option>
+       <option>    Vanuatu </option>
+       <option>    Vatican City    </option>
+       <option>    Venezuela   </option>
+       <option>    Vietnam </option>
+       <option>    Western Samoa   </option>
+       <option>    Yemen   </option>
+       <option>    Zaire   </option>
+       <option>    Zambia  </option>
+       <option>    Zimbabwe    </option>
+       <option value="OTHER">Other</option>
+     </select>
+   </fieldset>
+
+
+   <fieldset class="fieldf">
+     <input name="user_email_address" placeholder="Enter Email Address" type="text">
+   </fieldset>
+
+   <fieldset class="fieldf">
+     <input name="user_phone_number" placeholder="Enter Phone Number" type="tel">
+   </fieldset>
+
+   <fieldset class="fieldf">
+     <input type="text" id="birth" name="birth-d" placeholder="Select Date of Birth">
+   </fieldset>
+
+   <fieldset class="fieldf">
+     <select name="room-type" id="room">
+       <option value="">Status</option>
+       <option value="student">Student</option>
+       <option value="young-professional">Young Professional”</option>
+     </select>
+   </fieldset>
+
+
+
+ <fieldset class="fieldr">
+   <textarea name="message" placeholder="Special Requirements...."></textarea>
+ </fieldset>
+
+ <fieldset class="fieldr">
+   <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+ </fieldset>
+</form>
+
+<div id="map-s"></div>
+</div>
+</div>
+
+
+  <!--========================================
+  footer-->
+
+
+
+
+
+    <footer class="pfooter">
+      <div  class="page-footer">
+        <section class="about-company">
+          <h3>
+            About
+          </h3>
+          <p>
+            LA4U has more than 10 years’ experience in the accommodation finding sector for students and young professionals.
+          </p>
+          <p>
+            LA4U provides a wide range of houses suited for different budgets in zones 2, 3 and 4 in London.
+          </p>
+        </section>
+
+        <nav class="footer-list">
+          <h3>
+            Menu:
+          </h3>
+          <ul class="footer-wrapper">
+            <li class="footer-item">
+              <a href="about.html">
+                About Us
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="accommodations.html">
+                Our Houses
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="viewing.html">
+                Book a Viewing
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="#book-a-room.html">
+                Book a Room
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="quote.html">
+                Get a Quote
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="map-lg.html">
+                View on Map
+              </a>
+            </li>
+            <li class="footer-item">
+              <a href="contact.html">
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <address class="footer-list">
+          <h3>
+            Address:
+          </h3>
+          <div class="footer-wrapper">
+            <span class="footer-item">
+              Legacy Business Centre
+            </span>
+            <span class="footer-item">
+              2A Ruckholt Rd, Leyton
+            </span>
+            <span class="footer-item">
+              London E10 5NP, UK
+            </span>
+  			<span class="footer-item">
+              Phone: +44(0)2079989386
+            </span>
+            <span class="footer-item">
+              E-mail: hello@londonaccommodation4u.com
+            </span>
+          </div>
+        </address>
+        <section class="footer-list">
+
+              <h3>
+            Media:
+          </h3>
+            <iframe class="facebook" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Flondonaccommodation4u&tabs=timeline&width=340&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </nav>
+          </div>
+        </section>
+      </div>
+      <div class="right">
+        <p>2018 &copy; Tomasz Frączek</p>
+      </div>
+    </footer>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJyGbfNpO2_wMd-fEWwRJNiDjxR6HuKEo&callback=initMap"
+ type="text/javascript"></script>
+
+
+  </body>
+</html>
